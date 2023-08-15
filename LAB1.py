@@ -115,5 +115,8 @@ mode=[]
 for key in frequency.keys():
     if frequency[key]==count:
         mode.append(key)
-print(mode)
-#print(vector.count())
+for item in mode:
+    print('item ', item , 'exists ', frequency[item], ' times')
+    print('actual count of ',item, 'is ', vector.count(item))
+    
+print('Range is ',max(vector)-min(vector))
