@@ -46,7 +46,7 @@ X_train, X_test,y_train, y_test = train_test_split(X,y ,
                                    shuffle=True)
 
 from sklearn.naive_bayes import GaussianNB
-from sklearn.metrics import accuracy_score,confusion_matrix
+from sklearn.metrics import accuracy_score,confusion_matrix, ConfusionMatrixDisplay
 
 bayes=GaussianNB()
 
@@ -58,3 +58,7 @@ print(Accuracy)
 
 cm=confusion_matrix(y_test, y_pred)
 print(cm)
+import matplotlib.pyplot as plt
+disp=ConfusionMatrixDisplay(cm)
+disp.plot()
+plt.show()
